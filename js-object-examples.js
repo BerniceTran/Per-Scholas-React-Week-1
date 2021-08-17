@@ -25,3 +25,9 @@ console.log(myInfo);
 
 console.log("My info printed as a string in the JSON format");
 console.log(JSON.stringify(myInfo));
+ 
+function sayHi(name) {
+    return `My name is ${name}`;
+}
+
+console.log(sayHi("Bernice"));
