@@ -1,4 +1,3 @@
-console.log("hi");
 /*
 Use the strings in the arrays to form a sentence like: "Hi, my name is <Name>
 Be sure to have beginning words of sentences with the proper case.
@@ -34,26 +33,20 @@ function greeting(name, gender, isSelf) {
 
        if (gender === "male") {
               greeting = greetingWords[0];
-              if (isSelf === true) {
-                     prefix = prefixes[0];
-              }
-              else prefix = prefixes[1];
+              prefix = prefixes[1];
        }
 
-       else if (gender === "female") {
+       if (gender === "female") {
               greeting = greetingWords[1];
-              if (isSelf === true) {
-                     prefix = prefixes[0];
-              }
-              else prefix = prefixes[2];
+              prefix = prefixes[2];
        }
 
-       else if (gender === "nonbinary") {
+       if (gender === "nonbinary") {
               greeting = greetingWords[2];
-              if (isSelf === true) {
-                     prefix = prefixes[0];
-              }
-              else prefix = prefixes[3];
+              prefix = prefixes[3];
+       }
+       if (isSelf) {
+              prefix = prefixes[0];
        }
 
        return  `${firstLetterUpperCase(greeting)}, ${prefix} name is ${firstLetterUpperCase(name)}.`; // use template literal for string to return
