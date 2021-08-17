@@ -36,19 +36,20 @@ function greeting(name, gender, isSelf) {
               prefix = prefixes[1];
        }
 
-       if (gender === "female") {
+       else if (gender === "female") {
               greeting = greetingWords[1];
               prefix = prefixes[2];
        }
 
-       if (gender === "nonbinary") {
+       else if (gender === "nonbinary") {
               greeting = greetingWords[2];
               prefix = prefixes[3];
        }
+
        if (isSelf) {
               prefix = prefixes[0];
        }
-
+       
        return  `${firstLetterUpperCase(greeting)}, ${prefix} name is ${firstLetterUpperCase(name)}.`; // use template literal for string to return
 }
 
