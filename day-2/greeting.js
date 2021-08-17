@@ -1,12 +1,9 @@
 /*
 Use the strings in the arrays to form a sentence like: "Hi, my name is <Name>
 Be sure to have beginning words of sentences with the proper case.
-
 Console log the result
-
 Use a different greeting word for each gender
 Use "his" for men, "her" for women, "their" for nonbinary.
-
 Use "my" if the isSelf argument is true
 */
 
@@ -41,7 +38,7 @@ function greeting(name, gender, isSelf) {
               prefix = prefixes[2];
        }
 
-       else if (gender === "nonbinary") {
+       else (gender === "nonbinary") {
               greeting = greetingWords[2];
               prefix = prefixes[3];
        }
